@@ -7,12 +7,141 @@
 /* Common styles */
 @import url('./reset.css');
 @import url('./base.css');
-@import url('./container.css');
-@import url('./animations.css');
 
-/* Sections style */
-@import url('./header.css');
-@import url('./vite-promo.css');
-@import url('./badges.css');
-@import url('./back-link.css');
-@import url('./footer.css');
+.form {
+  padding-top: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 8px;
+
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+}
+
+.form input {
+  width: 272px;
+  border-radius: 4px;
+  border: 1px solid #808080;
+
+  padding: 8px 16px;
+  font-weight: 400;
+  color: #808080;
+}
+
+.btn {
+  border-radius: 8px;
+  padding: 8px 16px;
+  border-color: transparent;
+  background: #4e75ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+
+  padding: 8px 16px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.btn:hover {
+  background: #6c8cff;
+}
+#load-btn {
+  margin: 0 auto;
+  padding: 12px 24px;
+  width: 125px;
+  height: 40px;
+  visibility: hidden;
+}
+#load-btn.is-open {
+  visibility: visible;
+}
+
+.loader {
+  margin: 0 auto;
+  width: 48px;
+  height: 48px;
+  border: 5px solid #fff;
+  border-bottom-color: #ff3d00;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  visibility: hidden;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.loader.is-open {
+  visibility: visible;
+}
+
+.gallery {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 24px;
+  width: 1128px;
+  margin: 0 auto;
+  margin-bottom: 32px;
+}
+
+.gallery-link img {
+  display: block;
+  width: 360px;
+  height: 152px;
+  object-fit: cover;
+}
+
+.gallery-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #808080;
+}
+.info {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 20px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+.info-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.info-item b {
+  font-weight: 500;
+  line-height: 1.33;
+}
